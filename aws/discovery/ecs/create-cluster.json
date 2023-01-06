@@ -1,0 +1,17 @@
+{
+    "clusterName": "rust-servers",
+    "settings": [],
+    "configuration": {
+        "executeCommandConfiguration": {
+            "kmsKeyId": "0e469d98-2443-4943-ab4b-8c2e6da430e0",
+            "logging": "OVERRIDE",
+            "logConfiguration": {
+                "cloudWatchLogGroupName": "ecs/rust-servers",
+                "cloudWatchEncryptionEnabled": true,
+                "s3BucketName": "immortal-worlds-431054525215",
+                "s3EncryptionEnabled": true,
+                "s3KeyPrefix": "exec-output"
+            }
+        }
+    }
+}

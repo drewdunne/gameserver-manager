@@ -1,0 +1,4 @@
+{
+    "RoleName": "rust-servers-task-role",
+    "PolicyName": "rust-servers-task-role-policy"
+}

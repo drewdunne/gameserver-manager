@@ -1,0 +1,11 @@
+{
+    "FileSystemId": "fs-08b61ecdf15b86bbf",
+    "LifecyclePolicies": [
+        {
+            "TransitionToIA": "AFTER_30_DAYS"
+        },
+        {
+            "TransitionToPrimaryStorageClass": "AFTER_1_ACCESS"
+        }
+    ]
+}

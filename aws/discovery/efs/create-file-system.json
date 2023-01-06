@@ -1,0 +1,14 @@
+{
+    "PerformanceMode": "generalPurpose",
+    "Encrypted": true,
+    "KmsKeyId": "0e469d98-2443-4943-ab4b-8c2e6da430e0",
+    "ThroughputMode": "bursting",
+    "AvailabilityZoneName": "us-west-2a",
+    "Backup": true,
+    "Tags": [
+        {
+            "Key": "Name",
+            "Value": "Rust-Servers"
+        }
+    ]
+}

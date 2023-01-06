@@ -1,0 +1,5 @@
+{
+    "RoleName": "rust-servers-task-execution-role",
+    "AssumeRolePolicyDocument": "file://~/repos/iw/aws/discovery/iam/ecs-tasks-trust-policy.json",
+    "Description": "Task Execution Role for Rust Servers on ECS"
+}

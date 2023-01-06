@@ -1,0 +1,49 @@
+{
+    "family": "rust-server",
+    "networkMode": "awsvpc",
+    "executionRoleArn": "arn:aws:iam::431054525215:role/rust-servers-task-execution-role",
+    "taskRoleArn": "arn:aws:iam::431054525215:role/rust-servers-task-role",
+    "containerDefinitions": [
+        {
+            "name": "rust-server",
+            "image": "docker.io/drewdunne/iw-rust-base:v1",
+            "linuxParameters": {
+                "initProcessEnabled": true
+            },
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/rust-servers",
+                    "awslogs-region": "us-west-2",
+                    "awslogs-stream-prefix": "container-stdout"
+                }
+            },
+            "mountPoints": [
+                {
+                    "sourceVolume": "Rust-Servers",
+                    "containerPath": "/mount/efs",
+                    "readOnly": false
+                }
+            ]
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "8192",
+    "volumes": [
+        {
+            "name": "Rust-Servers",
+            "efsVolumeConfiguration": {
+                "fileSystemId": "fs-08aac058440969f68",
+                "rootDirectory": "/",
+                "transitEncryption": "ENABLED",
+                "authorizationConfig": {
+                    "accessPointId": "fsap-00e3fb2b512cef7fc",
+                    "iam": "ENABLED"
+                }
+            }
+        }
+    ]
+}
